@@ -274,7 +274,8 @@ a:hover.button-goods {
     border: 2px solid #ff0000;
     border-radius: 15px;
     padding: 1rem 1rem;
-    max-width: 285px;
+    max-width: 345px;
+    width: 95%;
     margin: 0 auto;
 
     .offer-text {
@@ -319,7 +320,7 @@ a:hover.button-goods {
 @media screen and (min-width: 425px) {
   .offer {
     .offer-item {
-      max-width: 330px;
+      // max-width: 330px;
       padding: 1rem 1.5rem;
     }
   }
