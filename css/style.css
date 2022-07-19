@@ -67,6 +67,16 @@ div.btnbg:hover {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 a:hover.button-goods {
@@ -289,7 +299,7 @@ a:hover.button-goods {
   border: 2px solid #ff0000;
   border-radius: 15px;
   padding: 1rem 1rem;
-  max-width: 280px;
+  max-width: 285px;
   margin: 0 auto;
   position: relative;
 }
@@ -352,5 +362,9 @@ a:hover.button-goods {
   padding-block: 1rem;
   font-weight: 600;
   font-size: 1rem;
+}
+
+.why-me {
+  padding-block: 3remd;
 }
 /*# sourceMappingURL=style.css.map */

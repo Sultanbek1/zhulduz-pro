@@ -48,6 +48,14 @@ div.btnbg:hover {
   transition: all 0.3s;
 
   cursor: pointer;
+
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 a:hover.button-goods {
@@ -266,7 +274,7 @@ a:hover.button-goods {
     border: 2px solid #ff0000;
     border-radius: 15px;
     padding: 1rem 1rem;
-    max-width: 280px;
+    max-width: 285px;
     margin: 0 auto;
 
     .offer-text {
@@ -344,4 +352,9 @@ a:hover.button-goods {
     font-weight: 600;
     font-size: 1rem;
   }
+}
+
+
+.why-me {
+  padding-block: 3remd;
 }
