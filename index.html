@@ -27,13 +27,15 @@
 
 <body>
     <div class="wrapper">
-        <main class="particles-js">
-            <div class="header"><div class="container">
-                
+        <main>
+
+            <div class="header">
+                <div class="container">
+
                     <div class="logo-holder">
                         <img src="src/img/logo.svg" alt="logo">
                     </div>
-                    <div class="banner">
+                    <div class="banner" id="revealOnTop">
                         <div class="banner-left">
                             <h1 class="header-title">Практическое обучение</h1>
                             <h2 class="header-subtitle">
@@ -42,7 +44,7 @@
                             </h2>
                             <div class="banner-button banner-mt text-center">
                                 <img src="src/img/person.webp" alt="">
-                                <a class="button-goods" role="button">
+                                <a class="button-goods" role="button" href="#services">
                                     Смотреть продукты
                                 </a>
                             </div>
@@ -50,9 +52,9 @@
                         <div class="banner-right">
                         </div>
                     </div>
+                </div>
             </div>
-            </div>
-            <div class="whom">
+            <div class="whom reveal">
                 <div class="container">
                     <div class="whom-holder">
                         <h3 class="whom-title h3-title">Для кого?</h3>
@@ -86,7 +88,7 @@
                             </div>
                         </div>
                         <div class="whom-button text-center">
-                            <a class="button-goods" role="button">
+                            <a class="button-goods" role="button" href="#services">
                                 Смотреть продукты
                             </a>
                         </div>
@@ -94,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="mentor">
+            <div class="mentor reveal">
                 <div class="container">
                     <div class="mentor-holder">
                         <h3 class="mentor-title h3-title">Наставник</h3>
@@ -221,7 +223,7 @@
                             </div>
                         </div>
                         <div class="offer-button text-center">
-                            <a class="button-goods" role="button">
+                            <a class="button-goods" role="button" href="#services">
                                 Смотреть продукты
                             </a>
                         </div>
@@ -297,7 +299,7 @@
                 </div>
             </div>
 
-            <div class="my-services">
+            <div class="my-services" id="services">
                 <div class="container">
                     <div class="my-services-title h3-title">
                         Мои услуги
@@ -305,7 +307,7 @@
 
                     <div class="row gy-5 justify-content-center">
                         <div class="col-12 col-md-7 col-xl-5">
-                            <a href="https://github.com/" class="service">
+                            <a href="ikigai.html" class="service">
                                 <div class="service-holder">
                                     <div class="service-header">
                                         <div class="service__title">
@@ -321,7 +323,7 @@
                             </a>
                         </div>
                         <div class="col-12 col-md-7 col-xl-5">
-                            <a href="https://github.com/" class="service">
+                            <a href="fin-proriv.html" class="service">
                                 <div class="service-holder">
                                     <div class="service-header">
                                         <div class="service__title">
@@ -389,11 +391,8 @@
         </footer>
     </div>
 
-    <script>
-        particlesJS.load('particles.js', 'particles.json', function () {
-            console.log('particles.json loaded...')
-        });
-    </script>
+    <script src="scripts/app.js"></script>
+
 </body>
 
 </html>

@@ -24,6 +24,14 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fafbfc;
+}
+
 :root {
   --fs-sm-h1: ;
   --fs-sm-400: 1rem;
@@ -169,7 +177,7 @@ a:hover.button-goods {
 .header .header-subtitle {
   text-align: center;
   max-width: 290px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0 auto;
   font-weight: 600;
 }
@@ -344,7 +352,7 @@ a:hover.button-goods {
 
 @media screen and (min-width: 375px) {
   .offer .offer-item {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
   }
 }
 
@@ -424,14 +432,35 @@ a:hover.button-goods {
   border-radius: 10px;
   overflow: hidden;
   padding: 2rem 2rem;
+  -webkit-transition: -webkit-box-shadow 0.5s ease;
+  transition: -webkit-box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
+  aspect-ratio: 1.6 / 1;
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   position: relative;
 }
 
+.my-services .service:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
 .my-services .service .service-holder {
   z-index: 10;
   cursor: pointer;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .my-services .service .bg-img {
@@ -471,10 +500,6 @@ a:hover.button-goods {
 .my-services .service:hover .bg-img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.my-services .service .service-header {
-  margin-bottom: 7rem;
 }
 
 .my-services .service .service__title {
@@ -574,5 +599,54 @@ a:hover.button-goods {
     border-top: unset;
     padding-top: 1rem;
   }
+}
+
+.banner {
+  position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.banner.active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.reveal {
+  position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.offer {
+  overflow-x: hidden;
+}
+
+.offer-item {
+  position: relative;
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.offer-item.active {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
