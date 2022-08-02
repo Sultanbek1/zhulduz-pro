@@ -78,6 +78,11 @@ a:hover.button-goods {
 .questions,
 .why-me {
   border-bottom: 1px solid rgba(89, 89, 89, 0.15);
+  padding-bottom: 3.5rem !important;
+}
+
+.my-services {
+  padding-bottom: 4rem !important;
 }
 
 .banner {
@@ -319,11 +324,13 @@ a:hover.button-goods {
   }
 }
 
-@media screen and (min-width: 425px) {
+  
+
+@media screen and (min-width: 375px) {
   .offer {
     .offer-item {
       // max-width: 330px;
-      padding: 1rem 1.5rem;
+      padding: 1rem 2rem;
     }
   }
 }
