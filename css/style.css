@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  background: #fafbfc;
+  background: #f8f6fa;
 }
 
 :root {
@@ -112,7 +112,6 @@ a:hover.button-goods {
 .questions,
 .why-me {
   border-bottom: 1px solid rgba(89, 89, 89, 0.15);
-  padding-bottom: 3.5rem !important;
 }
 
 .my-services {
@@ -153,6 +152,10 @@ a:hover.button-goods {
 }
 
 .header {
+  background-image: url("../src/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   padding-top: 10px;
   padding-bottom: 50px;
 }
@@ -177,14 +180,82 @@ a:hover.button-goods {
 .header .header-subtitle {
   text-align: center;
   max-width: 290px;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   margin: 0 auto;
   font-weight: 600;
+}
+
+.banner-right {
+  display: none;
 }
 
 @media screen and (min-width: 425px) {
   .header .header-subtitle {
     max-width: unset;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    height: 100vh;
+    max-height: 799px;
+    padding-bottom: 0;
+  }
+  .header .logo-holder img {
+    margin-left: 0;
+    width: 180px;
+  }
+  .header .header-title {
+    font-size: 2rem;
+    margin-bottom: 0.9rem;
+  }
+  .header .header-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  .header .button-goods {
+    max-width: 260px;
+  }
+  .banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .banner .banner-left {
+    padding-top: 3rem;
+    width: 55vw;
+  }
+  .banner .banner-left img {
+    display: none;
+  }
+  .banner .banner-left *:not(.button-goods) {
+    text-align: left;
+  }
+  .banner .banner-left .button-goods {
+    margin: 0;
+  }
+  .banner .banner-right {
+    display: block;
+  }
+  .banner .banner-right img {
+    max-width: 580px;
+    width: 34vw;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .header .header-title {
+    font-size: 2.5rem;
+  }
+  .header .header-subtitle {
+    font-size: 1.3rem;
+  }
+  .banner .banner-left {
+    padding-top: 6rem;
+  }
+  .banner-right-img {
+    width: 38vw;
   }
 }
 
@@ -234,6 +305,28 @@ a:hover.button-goods {
 .mentor {
   padding-block: 3rem;
   text-align: center;
+}
+
+.mentor .mentor-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mentor .mentor-list {
+  width: 100%;
+  max-width: 450px;
+  margin: 1.5rem auto 0;
 }
 
 .mentor .mentor-title {
@@ -291,8 +384,29 @@ a:hover.button-goods {
 }
 
 .mentor .mentor-item + .mentor-item {
-  -webkit-margin-before: 2rem;
-          margin-block-start: 2rem;
+  -webkit-margin-before: 1.3rem;
+          margin-block-start: 1.3rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .mentor .mentor-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 5rem;
+  }
+  .mentor .img-holder {
+    display: block;
+    margin-bottom: 0;
+  }
+  .mentor .mentor-list {
+    margin: 0;
+    max-width: 500px;
+  }
 }
 
 .offer {
@@ -314,7 +428,12 @@ a:hover.button-goods {
 }
 
 .offer .offer-item {
-  border: 2px solid #ff0000;
+  border: 1px solid rgba(17, 17, 17, 0.3);
+  background: #c0b491;
+  /* fallback for old browsers */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FFFFD5;
+  /* fallback for old browsers */
   border-radius: 15px;
   padding: 1rem 1rem;
   max-width: 345px;
@@ -348,6 +467,10 @@ a:hover.button-goods {
   background: -webkit-gradient(linear, left top, right top, from(#ff4b2b), to(#ff416c));
   background: linear-gradient(to right, #ff4b2b, #ff416c);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-gradient(linear, right top, left top, from(#ff416c), to(#ff4b2b));
+  background: linear-gradient(to left, #ff416c, #ff4b2b);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 @media screen and (min-width: 375px) {
@@ -402,7 +525,7 @@ a:hover.button-goods {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid #ff0000;
+  border: 1px solid #ff0000;
   border-radius: 15px;
   padding-inline: 1rem;
   height: 8rem;
@@ -436,7 +559,7 @@ a:hover.button-goods {
   transition: -webkit-box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
-  aspect-ratio: 1.6 / 1;
+  aspect-ratio: 1.3 / 1;
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   position: relative;
@@ -478,23 +601,23 @@ a:hover.button-goods {
 }
 
 .my-services .service .bg-img-1 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url("../src/img/restart.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../src/img/restart.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.4))), url("../src/img/sakura.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../src/img/sakura.jpg");
 }
 
 .my-services .service .bg-img-2 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url("../src/img/training.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../src/img/training.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))), url("../src/img/training.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../src/img/training.jpg");
 }
 
 .my-services .service .bg-img-3 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url("../src/img/sales.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../src/img/sales.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))), url("../src/img/sales.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../src/img/sales.jpg");
 }
 
 .my-services .service .bg-img-4 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url("../src/img/mentorServ.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../src/img/mentorServ.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.4))), url("../src/img/finance.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../src/img/finance.jpg");
 }
 
 .my-services .service:hover .bg-img {
@@ -616,6 +739,11 @@ a:hover.button-goods {
   opacity: 1;
 }
 
+.banner-left .header-title {
+  -webkit-animation: slideInRight 1s ease-out;
+          animation: slideInRight 1s ease-out;
+}
+
 .reveal {
   position: relative;
   -webkit-transform: translateY(150px);
@@ -635,18 +763,41 @@ a:hover.button-goods {
   overflow-x: hidden;
 }
 
-.offer-item {
-  position: relative;
-  -webkit-transform: translateX(150px);
-          transform: translateX(150px);
-  opacity: 0;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+.whom,
+.mentor,
+.offer,
+.questions,
+.why-me {
+  border-bottom: 1px solid rgba(89, 89, 89, 0.15);
+  padding-block: 3rem 5rem;
 }
 
-.offer-item.active {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  opacity: 1;
+@media screen and (min-width: 1000px) {
+  .why-me .why-me-item {
+    max-width: 420px;
+    padding-inline: 2rem;
+  }
+  .my-services .service .service__title {
+    font-size: 2rem;
+  }
+  .h3-title {
+    margin-bottom: 2rem !important;
+  }
+  :root {
+    --fs-600: 2.3rem;
+  }
+  .text-item {
+    font-size: 1.2rem !important;
+  }
+  .button-goods {
+    font-size: 1.15rem;
+  }
+  .offer .offer-item {
+    max-width: 430px;
+    padding: 1rem 2.5rem;
+  }
+  .offer .offer-title {
+    max-width: 450px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
