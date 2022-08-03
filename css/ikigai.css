@@ -36,12 +36,13 @@ body {
 }
 
 .video iframe {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
   position: absolute;
   z-index: 1000;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

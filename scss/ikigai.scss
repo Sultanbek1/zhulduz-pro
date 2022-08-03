@@ -46,6 +46,7 @@ body {
     padding-block: 0 56%;
   }
   iframe {
+    user-select: none !important;
     position: absolute;
     z-index: 1000;
     user-select: none;
