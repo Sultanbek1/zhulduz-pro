@@ -151,8 +151,16 @@ a:hover.button-goods {
   border-radius: 5px;
 }
 
-.header {
+.h-img-1 {
   background-image: url("../src/img/header.jpg");
+}
+
+.h-img-2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url("../src/img/fuji.jpg");
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../src/img/fuji.jpg");
+}
+
+.header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -198,7 +206,7 @@ a:hover.button-goods {
 @media screen and (min-width: 1000px) {
   .header {
     height: 100vh;
-    max-height: 799px;
+    max-height: 801px;
     padding-bottom: 0;
   }
   .header .logo-holder img {
@@ -432,7 +440,7 @@ a:hover.button-goods {
   background: #c0b491;
   /* fallback for old browsers */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: #FFFFD5;
+  background: #ffffd5;
   /* fallback for old browsers */
   border-radius: 15px;
   padding: 1rem 1rem;
@@ -779,6 +787,17 @@ a:hover.button-goods {
   }
   .my-services .service .service__title {
     font-size: 2rem;
+  }
+  .whom .whom-item + .whom-item {
+    -webkit-margin-before: 3rem;
+            margin-block-start: 3rem;
+  }
+  .whom .whom-list {
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+  .whom .img-checked {
+    margin-right: 0.5rem;
   }
   .h3-title {
     margin-bottom: 2rem !important;
