@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background: #f8f6fa;
+  // background: #f8f6fa;
 }
 
 :root {
@@ -40,6 +40,27 @@ div.btnbg:hover {
 }
 
 .button-goods {
+  overflow: hidden;
+  position: relative;
+
+  span {
+    z-index: 20;
+  }
+
+  &:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.3;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+
   display: inline-block;
   color: #ffffff;
   font-size: 1rem;
@@ -51,6 +72,8 @@ div.btnbg:hover {
   background-color: #ff0000;
   text-decoration: none;
   transition: all 0.3s;
+
+  box-shadow: 0px 0px 10px #ff0000;
 
   cursor: pointer;
 
@@ -66,6 +89,11 @@ a:hover.button-goods {
   color: #fff;
   transform: scale(1.1, 1.1);
   transition: 0.4s all ease-in-out;
+
+  &:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
 }
 
 .text-item {
@@ -83,7 +111,7 @@ a:hover.button-goods {
 .whom,
 .mentor,
 .offer,
-.questions,
+.program .questions,
 .why-me {
   border-bottom: 1px solid rgba(89, 89, 89, 0.15);
 }
@@ -127,8 +155,7 @@ a:hover.button-goods {
 }
 
 .h-img-2 {
-  background-image: linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-    url("../src/img/fuji.jpg");
+  background-image: url("../src/img/bg-white.jpg");
 }
 
 .header {
@@ -636,6 +663,7 @@ a:hover.button-goods {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     .footer-block-item {
       border-top: 1px solid #585858;
@@ -643,6 +671,21 @@ a:hover.button-goods {
       letter-spacing: 0.1em;
       flex-grow: 1;
       color: #585858;
+    }
+
+    .footer-block-item.sec {
+      text-decoration: none;
+      border-top: none;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -30%);
+      transition: all 0.5s ease;
+      color: #fff;
+      &:hover {
+        transform: translate(-50%, -30%) scale(1.2);
+        color: #fff;
+      }
     }
 
     .footer-block-socials {
@@ -682,6 +725,7 @@ a:hover.button-goods {
     .footer-block {
       flex-direction: column;
       padding-block: 2rem 3rem;
+      text-align: center;
 
       .footer-block-socials {
         order: 1;
@@ -690,12 +734,29 @@ a:hover.button-goods {
       }
 
       .footer-block-item:first-child {
+        order: 3;
+        padding-top: .9rem;
+        border-top: unset;
+      }
+
+      .footer-block-item.active {
+        border-top: 1px solid #585858;
+      }
+
+      .footer-block-item.sec {
         order: 2;
         padding-top: 1rem;
+        position: static;
+        transform: unset;
+        border-top: 1px solid #585858;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       .footer-block-item:last-child {
-        order: 3;
+        order: 4;
         border-top: unset;
         padding-top: 1rem;
       }
@@ -735,17 +796,17 @@ a:hover.button-goods {
   overflow-x: hidden;
 }
 
-// .offer-item {
-//   position: relative;
-//   transform: translateX(150px);
-//   opacity: 0;
-//   transition: all 1s ease;
+.offer-item {
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: all 1s ease;
 
-//   &.active {
-//     transform: translateX(0px);
-//     opacity: 1;
-//   }
-// }
+  &.active {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 
 .whom,
 .mentor,

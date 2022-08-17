@@ -2,19 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #e9e9e9;
-}
-
 .ikigai-page .banner .banner-left .header-title {
   text-transform: unset;
   text-align: center;
-  color: #fff;
-  font-size: clamp(1.15rem, 4vw, 2rem);
+  color: rgba(255, 0, 0, 0.8);
+  font-size: clamp(1.15rem, 6.5vw, 2rem);
 }
 
 .ikigai-page .banner .banner-left .header-title span {
-  font-size: clamp(0.85rem, 3vw, 1.5rem);
+  font-size: clamp(0.85rem, 4vw, 1.5rem);
 }
 
 .ikigai-page .banner .banner-left .button-goods {
@@ -61,10 +57,279 @@ body {
     padding-top: 9rem;
   }
   .ikigai-page .banner .banner-left .header-title {
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-size: clamp(2rem, 3.5vw, 4rem);
+    margin-bottom: 2rem;
+    line-height: 1.2;
   }
   .ikigai-page .banner .banner-left .header-title span {
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(2rem, 2.2vw, 3rem);
+  }
+}
+
+.program {
+  padding-block: 3rem;
+}
+
+.card-holder {
+  margin-block: 3rem 8rem;
+}
+
+.card-holder .card-holder-title {
+  margin-bottom: 4rem !important;
+}
+
+@media screen and (max-width: 576px) {
+  .card-holder {
+    margin-block: 3rem 4rem;
+  }
+  .card-holder .card-holder-title {
+    margin-bottom: 2rem !important;
+  }
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cards .card-item {
+  background: #fff;
+  color: #6d708d;
+  border-radius: 0.8rem;
+}
+
+.cards .card-item.active {
+  background: #ff416c;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: 1;
+}
+
+.cards ul {
+  margin: 2.6rem;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cards ul li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.cards ul li.price {
+  font-size: 3rem;
+  color: #494c5f;
+  padding-bottom: 2rem;
+}
+
+.cards .shadow {
+  -webkit-box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.cards .card-item.active .price {
+  color: #fff;
+}
+
+.cards .button-goods {
+  text-align: center;
+  margin-top: 1rem;
+  height: 2.6rem;
+  width: 13.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  background: #ff416c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, #ff416c, #ff4b2b);
+  font-size: 1rem;
+}
+
+.cards .button-goods:hover {
+  color: #fff;
+}
+
+.cards .active-btn {
+  background: #fff;
+  color: #696fdd;
+  color: rgba(255, 0, 0, 0.8);
+}
+
+.cards .active-btn:hover {
+  color: #ff0000;
+}
+
+.cards .bottom-bar {
+  border-bottom: 1px solid rgba(214, 214, 220, 0.582);
+}
+
+.cards .card-item.active .bottom-bar {
+  border-bottom: 1px solid rgba(214, 214, 220, 0.253);
+}
+
+.cards .pack {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@media (max-width: 280px) {
+  .cards {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards ul {
+    margin: 1rem;
+  }
+  .cards h1 {
+    font-size: 1.2rem;
+  }
+  .cards .toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+  }
+  .cards .card-item {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin-bottom: 1rem;
+  }
+  .cards .cards .card-item.active {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media (min-width: 280px) and (max-width: 320px) {
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards ul {
+    margin: 20px;
+  }
+  .cards .card-item {
+    margin-bottom: 1rem;
+  }
+  .cards .cards .card-item.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards .card-item {
+    margin-bottom: 2rem;
+  }
+  .cards .card-item.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (min-width: 414px) and (max-width: 768px) {
+  .cards .card-item {
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  .cards .card-item.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1046px) {
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cards .card-item {
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+  .cards .card-item.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 /*# sourceMappingURL=ikigai.css.map */
